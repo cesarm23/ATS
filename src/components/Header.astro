@@ -8,11 +8,11 @@
 
     <!-- Navegación -->
     <nav class="nav">
-      <a href="#">Inicio</a>
-      <a href="#">Sobre Nosotros</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#">Sectores</a>
-      <a href="#information">Contacto</a>
+      <a href="/#hero">Inicio</a>
+      <a href="/about">Sobre Nosotros</a>
+      <a href="/#services">Servicios</a>
+      <a href="#sectores">Sectores</a>
+      <a href="/#information">Contacto</a>
     </nav>
 
     <!-- Idioma -->
@@ -27,8 +27,14 @@
 </header>
 
 <style>
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  background: white;
+}
+
 .container {
-  max-width: 1920px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -63,6 +69,14 @@
   padding: 5px 10px;
 }
 
+.nav a:hover {
+  color: red;
+}
+
+nav a.active {
+  color: red;
+  font-weight: bold;
+}
 
 @media (max-width: 900px) {
   .container {
@@ -91,3 +105,23 @@
   }
 }
 </style>
+
+<script>
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("nav a");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === "#" + entry.target.id) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+  }, { threshold: 0.6 });
+
+  sections.forEach(section => observer.observe(section));
+</script>

@@ -19,7 +19,11 @@ const {
         <p><strong>Contáctenos.</strong></p>
         <p>Tel. Oficina: {phone}</p>
         <p>Whatsapp: {whatsapp}</p>
-        <p>Correo: {email}</p>
+        <p> 
+          <a href="sales@angular-tech.com">
+            Correo: {email}
+          </a>
+        </p>
       </div>
     </div>
 
@@ -53,6 +57,11 @@ const {
     color: #1f3b73;
     margin-bottom: 2rem;
     font-size: 2rem;
+  }
+
+  a {
+    color: #1f3b73;
+    text-decoration: none;
   }
 
   p{
@@ -92,6 +101,9 @@ const {
     margin-right: 0.5rem;
   }
 
+  .cta__btn:hover {
+    background: #1f3b73;
+  }
   @media (max-width: 600px) {
     .cta__content {
       flex-direction: column;
