@@ -1,0 +1,209 @@
+<footer class="footer">
+  <div class="footer-container">
+
+  <section class="contact">
+    <div class="container">
+      <h2>Contacto</h2>
+
+    <form class="form">
+      <div class="row">
+        <div class="field">
+          <label>Nombre *</label>
+          <input type="text" name="nombre" required />
+        </div>
+
+        <div class="field">
+            <label>Apellido *</label>
+            <input type="text" name="apellido" required />
+            </div>
+        </div>
+
+        <div class="field full">
+            <label>Email *</label>
+            <input type="email" name="email" required />
+        </div>
+
+        <div class="field full">
+            <label>Mensaje</label>
+            <textarea name="mensaje" rows="4"></textarea>
+        </div>
+
+        <button class="btn-enviar" type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+  </div>
+    <div class="footer-info">
+        <div>
+        <p>Dirección. Alajuela, Costa Rica.</p>
+        </div>
+
+        <div>
+        <p>Tel: +506 24375750</p>
+        <p>Tel: +506 70717800</p>
+        </div>
+
+        <div>
+        <p>Email: sales@angular-tech.com</p>
+        </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Creado por <a href="#">Angular Technology Solutions</a></p>
+    <button class="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAxElEQVR4nO3XTQrCMBRF4eBAdLfOXJiD2s15REQo2lBb83Of3AMZZZKPRwYvJeecc845Fzbg8DgpcsAeuAAjcEzBEa/iYfhExMPw/BMD+Qb5P8P8JM7ACbiFmAwZxOReH8MCIgSGLxHSGFYiJDFsREhh+BEhgaEQoiuGwoguGCohmmKojGiCoRGiKobGiCqYXoiimN6IIhgVxE8YNcQmjCpiNWYGIoPIYMbsyjzByCHeMNfFvR/YJfEI8EbnnHPOufRH3QEEO8YvyMQIUAAAAABJRU5ErkJggg==" alt="collapse-arrow--v1">
+    </button>
+  </div>
+  
+</footer>
+
+<style>
+  .footer {
+    background-color: #24357a; 
+    color: #fff;
+    padding: 40px 20px 20px;
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .footer-info{
+    justify-content: space-between;
+    display: flex;
+    max-width:900px;
+    margin: 0 auto 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-bottom a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .scroll-top {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-info{
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .row {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .scroll-top img {
+        width: 40px;
+        height: auto;
+    }
+  }
+
+  .contact {
+    background-color: #24357a;
+    color: white;
+    padding: 60px 20px;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: xx-large;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+  }
+
+  .field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .field.full {
+    margin-bottom: 30px;
+  }
+
+  label {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  input,
+  textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    padding: 10px 5px;
+    outline: none;
+    font-size: 14px;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .btn-enviar {
+    display: block;
+    margin: 30px auto 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+
+  .btn-enviar:hover {
+    text-decoration: underline;
+    border-radius: 5px;
+    background-color: rgb(134, 32, 32);
+    height: 25px;
+    width: 90px;
+  }
+
+
+</style>

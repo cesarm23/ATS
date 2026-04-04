@@ -1,0 +1,139 @@
+---
+const services = [
+  {
+    title: "Desarrollo e Implementación de Sistemas",
+    desc: "Diseñamos e implementamos sistemas robustos, escalables y personalizados que optimizan procesos clave en áreas como finanzas, logística y BackOffice."
+  },
+  {
+    title: "Soporte Técnico e Infraestructura",
+    desc: "Brindamos soporte continuo y gestión de infraestructura tecnológica para garantizar la estabilidad, disponibilidad y rendimiento de tus plataformas."
+  },
+  {
+    title: "Redes Empresariales",
+    desc: "Diseñamos, configuramos y mantenemos redes seguras y eficientes que conectan tu operación de forma confiable."
+  },
+  {
+    title: "Ciberseguridad",
+    desc: "Protegemos tus activos digitales con estrategias avanzadas de ciberseguridad. Implementamos controles, monitoreo y políticas que resguardan tu información y aseguran la continuidad operativa frente a riesgos internos y externos."
+  },
+  {
+    title: "Gestión de Proyectos",
+    desc: "Nuestra especialización en herramientas Oracle (OTM,  WMS, ERP, CX) nos permite entregar soluciones de alto impacto."
+  }
+];
+---
+
+<section id="servicios" class="services">
+  <div class="services__header">
+    <h2>Nuestros servicios</h2>
+    <p>
+      En Angular Technology Solutions ofrecemos soluciones tecnológicas integrales
+      que impulsan la eficiencia, seguridad y crecimiento de tu empresa.
+    </p>
+  </div>
+
+  <div class="services__grid container">
+    {services.map((service) => (
+      <div class="service-card">
+        <h3>{service.title}</h3>
+        <p>{service.desc}</p>
+        <a href="#">+ Leer más</a>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+.services {
+  background: #eaeaea;
+  padding-bottom: 4rem;
+}
+
+.services__header {
+  background: #243874;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem 6rem;
+}
+
+.services__header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.services__header p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: -4rem;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+.service-card {
+  position: relative;
+  background: #f5f7fa;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-right: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  transform: translate(10px, 10px);
+  z-index: -1;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  color: #1e3a5f;
+  font-size: 1.4rem;
+}
+
+.service-card p {
+  font-size: 1rem;
+}
+
+.service-card a {
+  color: red;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: -2rem;
+    margin-left: 10px;
+    margin-right: 10px
+  }
+  
+.service-card h3 {
+  color: #1e3a5f;
+  font-size: 1rem;
+}
+
+.service-card p {
+  font-size: 0.9rem;
+}
+
+.services{
+  width: fit-content;
+}
+}
+</style>

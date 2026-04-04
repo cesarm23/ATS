@@ -1,0 +1,96 @@
+<header class="header">
+  <div class="container">
+    
+    <!-- Logo -->
+    <div class="logo">
+      <img src="/src/images/Logo.png" alt="ATS Logo" />
+    </div>
+
+    <!-- Navegación -->
+    <nav class="nav">
+      <a href="#">Inicio</a>
+      <a href="#">Sobre Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#">Sectores</a>
+      <a href="#">Contacto</a>
+    </nav>
+
+    <!-- Idioma -->
+    <div class="lang">
+      <select>
+        <option>Español</option>
+        <option>English</option>
+      </select>
+    </div>
+
+  </div>
+</header>
+
+<style>
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+/* Logo */
+.logo img {
+  width: 300px;
+  margin-right: -10px
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #0a2540;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+
+/* Language */
+.lang {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.lang select {
+  padding: 5px 10px;
+}
+
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .lang {
+    justify-content: center;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo img {
+    width: 180px;
+    margin-right: 20px
+  }
+}
+</style>

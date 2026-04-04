@@ -1,0 +1,116 @@
+
+
+<section class="hero">
+  <div class="hero_bg">
+    <img src='src/images/Fondo1.avif' alt="Hero background" />
+  </div>
+
+  <div class="hero_content container">
+    <div class="hero_card">
+      <h1>Especialistas en soluciones tecnológicas</h1>
+      <p>En Angular Technology Solutions somos especialistas en transformación digital, con un equipo altamente capacitado en desarrollo e implementación de sistemas, soporte técnico, infraestructura tecnológica, redes y ciberseguridad. 
+        Adaptamos cada solución a las necesidades específicas de nuestros clientes, ofreciendo servicios eficientes, escalables y seguros que impulsan la productividad y la competitividad empresarial.
+        Nuestra experiencia comprobada, el uso de tecnología de vanguardia y un firme compromiso con la excelencia nos permiten garantizar resultados tangibles, continuidad operativa y crecimiento sostenible.
+        Confía en nosotros para llevar tu empresa al siguiente nivel.</p>
+      <button class="btn">Más información</button>
+    </div>
+  </div>
+</section>
+
+<style>
+.hero {
+  position: relative;
+  width: 100%;
+  height: 950px;
+  overflow: hidden;
+}
+
+.hero_bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero_content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hero_card {
+  background: #f5f7fa;
+  padding: 2rem;
+  max-width: 350px;
+  margin-right: 25%;
+  margin-top: 20%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+  clip-path: inset(0 100% 0 0);
+  animation: revealRight 1s ease-out forwards;
+}
+
+@keyframes revealRight {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.hero__card {
+  position: relative;
+  background: #f5f7fa;
+  padding: 2rem;
+  max-width: 350px;
+  margin-right: 25%;
+  margin-top: 20%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Cortina */
+.hero__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f5f7fa; /* mismo color del card */
+  z-index: 2;
+  transform: translateX(0);
+  animation: openCurtain 1s ease-out forwards;
+}
+
+/* Animación */
+@keyframes openCurtain {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.hero_card h1 {
+  font-size: 1.8rem;
+  color: #1e3a5f;
+  margin-bottom: 1rem;
+}
+
+.hero_card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.btn {
+  margin-top: 1rem;
+  background: red;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+    .hero_card{
+        margin-right: 0px;
+        max-width: fit-content;
+    }
+}
+
+</style>
