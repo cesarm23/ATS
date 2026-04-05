@@ -117,10 +117,14 @@ const services = [
 
 @media (max-width: 900px) {
   .services__grid {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
     margin-top: -2rem;
-    margin-right: 10%;
-    margin-left: 5%;
+    
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 1rem;
   }
   
 .service-card h3 {
