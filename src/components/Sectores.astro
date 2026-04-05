@@ -1,0 +1,140 @@
+<section id="hero" class="hero">
+  <div class="hero_bg">
+    <img src="/images/Fondo3.avif" alt="Hero background" />
+  </div>
+
+  <div class="hero_content container">
+    <div class="hero_card">
+      <h1>Soluciones TI para su empresa</h1>
+    </div>
+
+    <div class="info__card">
+        <h3>Sector Logístico</h3>
+        <p>En <strong>Angular Technology Solutions</strong> contamos con una sólida trayectoria en el desarrollo de soluciones tecnológicas para el sector logístico. Nuestra experiencia incluye sistemas especializados para la gestión de almacenes (WMS), control de transporte, procesos de tramitología aduanal y agencias de carga internacional.
+        Diseñamos e implementamos plataformas que optimizan cada etapa de la cadena logística, mejorando la eficiencia operativa, la trazabilidad y la toma de decisiones en tiempo real.</p>
+        <h3>Financiero Contable</h3>
+        <p>En <strong>Angular Technology Solutions</strong> contamos con amplia experiencia en la implementación de soluciones tecnológicas para procesos financieros y contables. Hemos desarrollado e integrado sistemas ERP y plataformas CX que optimizan la gestión empresarial, desde la planificación hasta la atención al cliente.
+        Nos especializamos en el desarrollo del ciclo completo Order to Cash, asegurando eficiencia, trazabilidad y control en cada etapa del proceso. Nuestras soluciones permiten a las empresas tomar decisiones estratégicas basadas en información confiable y en tiempo real.</p>
+        <h3>Sector Retail</h3>
+        <p>En <strong>Angular Technology Solutions</strong> desarrollamos soluciones tecnológicas que impulsan la eficiencia y el control en operaciones comerciales. Contamos con amplia experiencia en la implementación de sistemas para puntos de venta (POS), gestión de inventarios y facturación electrónica, adaptados a las necesidades del entorno retail.
+        Nuestras plataformas permiten una administración ágil, segura y centralizada, mejorando la experiencia del cliente y facilitando la toma de decisiones basada en datos en tiempo real</p>
+        <h3>Sector Transporte</h3>
+        <p>En <strong>Angular Technology Solutions</strong> contamos con amplia experiencia en el desarrollo e implementación de soluciones tecnológicas para el sector transporte. Hemos realizado exitosas implementaciones de Oracle Transportation Management (OTM), así como desarrollos a la medida que responden a los desafíos específicos de la industria.
+        Nuestras soluciones permiten optimizar la planificación, ejecución y seguimiento de operaciones logísticas, mejorando la eficiencia, la trazabilidad y el control en cada etapa del proceso de transporte.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero_bg img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-bottom: #1e3a5f solid 10px;
+}
+
+/* Contenido */
+.hero_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.hero_card {
+  background: #f5f7fa;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  margin-top: -5%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+  clip-path: inset(0 100% 0 0);
+  animation: revealRight 1s ease-out forwards;
+}
+
+.info__card {
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  margin-top: -3%;
+}
+
+@keyframes revealRight {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.hero__card {
+  position: relative;
+  background: #f5f7fa;
+  padding: 2rem;
+  max-width: 350px;
+  margin-top: 20%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.hero__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f5f7fa; 
+  z-index: 2;
+  transform: translateX(0);
+  animation: openCurtain 1s ease-out forwards;
+}
+
+/* Animación */
+@keyframes openCurtain {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.hero_card h1 {
+  font-size: 3rem;
+  color: #1e3a5f;
+  margin-bottom: 1rem;
+}
+
+.info__card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #1e3a5f;
+}
+
+.info__card h3 {
+  font-size: 1.4rem;
+  color: #1e3a5f;
+  margin-top: 2rem;
+}
+
+.btn {
+  margin-top: 1rem;
+  background: red;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+    .hero_content {
+        margin-left: 5%;
+        margin-right: 5%;
+        width: fit-content;
+    }
+
+}
+
+
+</style>

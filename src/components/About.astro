@@ -1,0 +1,139 @@
+<section id="hero" class="hero">
+  <div class="hero_bg">
+    <img src="/images/Fondo2.avif" alt="Hero background" />
+  </div>
+
+  <div class="hero_content container">
+    <div class="hero_card">
+      <h1>¿Por qué elegir los servicios de Angular Technology Solutions?</h1>
+    </div>
+
+    <div class="info__card">
+        <h3>01.</h3>
+        <p>Hemos liderado proyectos tecnológicos de gran escala en 7 países, incluyendo implementaciones de Oracle ERP, CX, OTM y OWMS, con resultados exitosos y medibles.</p>
+        <h3>02.</h3>
+        <p>Ofrecemos soluciones integrales de transformación digital, diseñadas para adaptarse a las necesidades específicas de cada cliente y garantizar resultados tangibles y sostenibles.</p>
+        <h3>03.</h3>
+        <p>Aplicamos metodologías ágiles y estándares internacionales (PMP, Agil, Scrum, otros) para garantizar eficiencia, seguridad y cumplimiento normativo, incluyendo factura electrónica con 99.99% de precisión.</p>
+        <h3>04.</h3>
+        <p>Amplia experiencia gestionando simultáneamente, más de 1,000 dispositivos críticos (endpoints, servidores, firewalls, redes) y, la experiencia de brindar protección avanzada para más de 25 clientes, asegurando continuidad operativa y resiliencia ante amenazas.</p>
+        <h3>05.</h3>
+        <p>En Angular Technology Solutions contamos con un equipo de ingenieros altamente capacitados, respaldados por sólidas metodologías de trabajo y un liderazgo estratégico que impulsa resultados. Nuestra experiencia técnica, combinada con un enfoque colaborativo y orientado a la excelencia, nos permite ofrecer soluciones confiables, eficientes y adaptadas a las necesidades de cada cliente.</p>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero_bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom: #1e3a5f solid 10px;
+}
+
+/* Contenido */
+.hero_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.hero_card {
+  background: #f5f7fa;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  margin-top: -5%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+  clip-path: inset(0 100% 0 0);
+  animation: revealRight 1s ease-out forwards;
+}
+
+.info__card {
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  margin-top: -3%;
+}
+
+@keyframes revealRight {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.hero__card {
+  position: relative;
+  background: #f5f7fa;
+  padding: 2rem;
+  max-width: 350px;
+  margin-top: 20%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.hero__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f5f7fa; 
+  z-index: 2;
+  transform: translateX(0);
+  animation: openCurtain 1s ease-out forwards;
+}
+
+/* Animación */
+@keyframes openCurtain {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.hero_card h1 {
+  font-size: 1.8rem;
+  color: #1e3a5f;
+  margin-bottom: 1rem;
+}
+
+.info__card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #1e3a5f;
+}
+
+.info__card h3 {
+  font-size: 1.4rem;
+  color: #1e3a5f;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  margin-top: 1rem;
+  background: red;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+    .hero_content {
+        margin-left: 5%;
+        margin-right: 5%;
+        width: fit-content;
+    }
+
+}
+
+
+</style>
