@@ -2,23 +2,28 @@
 const services = [
   {
     title: "Desarrollo e Implementación de Sistemas",
-    desc: "Diseñamos e implementamos sistemas robustos, escalables y personalizados que optimizan procesos clave en áreas como finanzas, logística y BackOffice."
+    desc: "Diseñamos e implementamos sistemas robustos, escalables y personalizados que optimizan procesos clave en áreas como finanzas, logística y BackOffice.",
+    slug: "desarrollo-sistemas"
   },
   {
     title: "Soporte Técnico e Infraestructura",
-    desc: "Brindamos soporte continuo y gestión de infraestructura tecnológica para garantizar la estabilidad, disponibilidad y rendimiento de tus plataformas."
+    desc: "Brindamos soporte continuo y gestión de infraestructura tecnológica para garantizar la estabilidad, disponibilidad y rendimiento de tus plataformas.",
+    slug: "soporte-infraestructura"
   },
   {
     title: "Redes Empresariales",
-    desc: "Diseñamos, configuramos y mantenemos redes seguras y eficientes que conectan tu operación de forma confiable."
+    desc: "Diseñamos, configuramos y mantenemos redes seguras y eficientes que conectan tu operación de forma confiable.",
+    slug: "redes-empresariales"
   },
   {
     title: "Ciberseguridad",
-    desc: "Protegemos tus activos digitales con estrategias avanzadas de ciberseguridad. Implementamos controles, monitoreo y políticas que resguardan tu información y aseguran la continuidad operativa frente a riesgos internos y externos."
+    desc: "Protegemos tus activos digitales con estrategias avanzadas de ciberseguridad. Implementamos controles, monitoreo y políticas que resguardan tu información y aseguran la continuidad operativa frente a riesgos internos y externos.",
+    slug: "ciberseguridad"
   },
   {
     title: "Gestión de Proyectos",
-    desc: "Nuestra especialización en herramientas Oracle (OTM,  WMS, ERP, CX) nos permite entregar soluciones de alto impacto."
+    desc: "Nuestra especialización en herramientas Oracle (OTM,  WMS, ERP, CX) nos permite entregar soluciones de alto impacto.",
+    slug: "gestion-proyectos"
   }
 ];
 ---
@@ -37,7 +42,7 @@ const services = [
       <div class="service-card fade-in" style={`transition-delay: ${i * 0.15}s`}>
         <h3>{service.title}</h3>
         <p>{service.desc}</p>
-        <a href="#">+ Leer más</a>
+        <a href={`/services/${service.slug}`}>+ Leer más</a>
       </div>
     ))}
   </div>
